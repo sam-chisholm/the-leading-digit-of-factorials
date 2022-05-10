@@ -6,9 +6,10 @@ import numpy as np
 # note that initially digits_freq["1"] = 1 since 0! = 1
 digits_freq = {"1": 1, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0}
 
+
 # I' m only testing this code segment for n = 50000
 # but, you could use it as well for the 2 previous values of n
-n = 10000
+n = 50000
 
 factorial = 1
 for x in range(1, n):
@@ -63,6 +64,9 @@ y = np.log10(1 + 1 / x) * n
 plt.plot(x, y, color="blue", linewidth=3, markevery=(leading_digit - 1) * 10, marker="X",
          markerfacecolor="yellow", markersize=10)
 
+# this statement is used to set the min and max values of the y-axis
+plt.ylim(0, 0.35 * n)
+
 # if you don't use this line of code, not all digits will be printed on the x-axis
 plt.xticks(leading_digit)
 
@@ -77,7 +81,7 @@ plt.title(title)
 
 # first we fill text with the values of all calculated parameters
 text = "$\\mu$ = " + str(mean)
-text += "\n$\\sigma_{2}$ = " + str(variance)
+text += "\n$\\sigma^2$ = " + str(variance)
 text += "\nmedian = " + str(median)
 
 # then we display it on the graph
@@ -98,6 +102,7 @@ for i, freq in enumerate(frequency_values, 1):
 # here we display the theoretical percentages based on Benford's law
 for i, freq in enumerate(benford_freq, 1):
     plt.text(i - 0.25, (freq + 0.02) * n, str(round(freq * 100, 3)) + "%", color="blue")
+
 
 plt.text(4.8, 0.15 * n, "the real observed values are in black")
 plt.text(4.8, 0.13 * n, "the theoretical values based on Benford's law are in blue",
