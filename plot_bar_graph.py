@@ -68,8 +68,8 @@ title += "of computed factorials for n = " + str(n) + "\n"
 plt.title(title, color="blue")
 
 # first we fill text with the values of all computed parameters
-text = "$\\mu $= " + str(mean)
-text += "\n$\\sigma^2$= " + str(variance)
+text = "$\\mu $ = " + str(mean)
+text += "\n$\\sigma^2$ = " + str(variance)
 text += "\nmedian = " + str(median)
 
 # then we display it on the graph
