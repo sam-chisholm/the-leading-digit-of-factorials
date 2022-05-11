@@ -14,6 +14,5 @@ for x in range(1, n):
     # then we use it to access the dictionary and increment the corresponding value
     digits_freq[str(factorial)[0]] += 1
 
-
 # here n = 16, so the printed dictionary will be exactly the table in the introduction
 print(digits_freq)
