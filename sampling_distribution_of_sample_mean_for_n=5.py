@@ -1,7 +1,6 @@
-# IMPORTANT NOTE: this code takes roughly 1 minute to finish execution
+# NOTE: this code takes roughly 1 minute to finish execution
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.stats import norm
 
 # first, we'll store our population set in one single array
 # note that the first element of the array is 1 since 0! = 1
@@ -12,16 +11,15 @@ for x in range(1, 10000):
     factorial *= x
 
     # after computing factorial we convert it into a string
-    # get that first element and converting that into an integer
+    # get that first element and converting that again into an integer
     # then append that in our array
     population_data = np.append(population_data, int(str(factorial)[0]))
 
-# this line of code is made just to make sure that we get the same samples!
+# this line of code is made just to make sure that we get the same samples
 np.random.seed(0)
 
-# first we execute this for n = 100
-# then we change the value of n to 600 and execute again
-n = 100
+# we execute this for n = 5
+n = 5
 
 # here we'll be drawing 5000 samples, each sample of size n
 # and for each sample, we're calculating its mean
@@ -48,14 +46,8 @@ plt.figure(figsize=(15, 8))
 # area under histogram is integrated to 1
 plt.hist(sample_means, bins=20, density=True)
 
-# In the same time we draw the normal curve on top of the histogram
-x = np.arange(np.amin(sample_means), np.amax(sample_means), 0.001)
-plt.plot(x, norm.pdf(x, sampling_distribution_mean, np.sqrt(sampling_distribution_variance)),
-         color="red", linewidth=3)
-
-# setting the x and y label of the graph
+# setting the x label of the graph
 plt.xlabel("\ncomputed sample means")
-plt.ylabel("density\n")
 
 # setting the plot's title
 title = "A histogram showing the sampling distribution\n"
@@ -67,6 +59,6 @@ text = "$\\mu_{\\overline{X}}$ = " + str(sampling_distribution_mean)
 text += "\n$\\sigma^2_{\\overline{X}}$ = " + str(sampling_distribution_variance)
 
 # then we display it on the graph
-plt.text(np.min(sample_means), 1.5, text, color="blue")
+plt.text(6, 0.35, text, color="blue")
 
 plt.show()
