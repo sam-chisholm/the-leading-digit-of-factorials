@@ -26,7 +26,7 @@ n = 5
 # note that we're storing the sample means in this array
 sample_means = np.array([])
 for i in range(5000):
-    sample = np.random.choice(population_data, size=n)
+    sample = np.random.choice(population_data, size=n, replace=True)
 
     sample_means = np.append(sample_means, np.mean(sample))
 
@@ -44,7 +44,7 @@ plt.figure(figsize=(15, 8))
 # the sampling distribution of the sample mean
 # note that density=True means that the sum of
 # area under histogram is integrated to 1
-plt.hist(sample_means, bins=20, density=True)
+plt.hist(sample_means, bins="auto", density=True, color="#0504aa", edgecolor="black", linewidth=2)
 
 # setting the x label of the graph
 plt.xlabel("\ncomputed sample means")
