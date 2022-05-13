@@ -24,6 +24,6 @@ n = 10
 # here we'll be drawing 5 samples, each sample of size n
 # and for each sample, we're calculating some basic statistics
 for i in range(1, 6):
-    sample = np.random.choice(population_data, size=n)
+    sample = np.random.choice(population_data, size=n, replace=True)
     print("sample " + str(i) + ":", sample, np.mean(sample),
           np.median(sample), np.var(sample, ddof=1), sep="\t\t")
