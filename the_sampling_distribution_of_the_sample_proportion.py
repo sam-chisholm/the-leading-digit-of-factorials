@@ -79,4 +79,5 @@ text += "\n$\\frac{p \\times (1 - p)}{n}$ = " + str(0.1276 * 0.8724 / n)
 
 # then we display it on the graph
 plt.text(0.155, 15, text)
+
 plt.show()
