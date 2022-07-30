@@ -51,9 +51,10 @@ plt.rcParams.update({"font.size": 15})
 
 # Set width and height of the plot's window
 plt.figure(figsize=(15, 8))
+plt.box(False)
 
 # plot the bar graph
-plt.bar(leading_digit, frequency_values, color="crimson", width=0.75)
+plt.bar(leading_digit, frequency_values, color="#3185fc", edgecolor="black", linewidth=2)
 
 # if you don't use this line of code, not all digits will be printed on the x-axis
 plt.xticks(leading_digit)
@@ -73,7 +74,7 @@ text += "\n$\\sigma^2$ = " + str(variance)
 text += "\nmedian = " + str(median)
 
 # then we display it on the graph
-plt.text(6, 0.25 * n, text)
+plt.text(6, 0.23 * n, text)
 
 # here we calculate the percentage of each digit then we display it on top of each bar
 for i, freq in enumerate(frequency_values, 1):
