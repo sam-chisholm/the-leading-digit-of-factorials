@@ -19,7 +19,7 @@ for x in range(1, n):
 
 # now we simply create 2 "arrays" to compute all parameters needed
 # and to plot our population distribution
-leading_digit = np.array(range(1, 10))
+leading_digit = np.arange(1, 10)
 frequency_values = np.array(list(digits_freq.values()))
 
 # now to compute the mean we first multiply the 2 previous "arrays" element by element
