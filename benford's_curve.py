@@ -63,7 +63,7 @@ y = np.log10(1 + 1 / x) * n
 # plotting Benford's curve
 # note that the yellow X in Benford's curve corresponds to leading_digit values
 plt.plot(x, y, color="blue", linewidth=3, markevery=(leading_digit - 1) * 10, marker="X",
-         markerfacecolor="yellow", markersize=10)
+         markerfacecolor="yellow", markersize=15)
 
 # if you don't use this line of code, not all digits will be printed on the x-axis
 plt.xticks(leading_digit)
