@@ -53,7 +53,7 @@ plt.figure(figsize=(15, 8))
 plt.box(False)
 
 # plot the bar graph
-plt.bar(leading_digit, frequency_values, color="#3185fc", edgecolor="black", linewidth=2)
+plt.bar(leading_digit, frequency_values, color="#ff1654", edgecolor="black", linewidth=2)
 
 # setting the x-coordinates of the curve
 x = np.arange(1, 9.5, 0.1)
