@@ -21,7 +21,7 @@ for x in range(1, n):
 
 # now we simply create 2 "arrays" to compute all parameters needed
 # and to plot our population distribution
-leading_digit = np.array(range(1, 10))
+leading_digit = np.arange(1, 10)
 frequency_values = np.array(list(digits_freq.values()))
 
 # here we compute the real observed parameters of the population
@@ -50,9 +50,10 @@ plt.rcParams.update({"font.size": 15})
 
 # Set width and height of the plot's window
 plt.figure(figsize=(15, 8))
+plt.box(False)
 
 # plot the bar graph
-plt.bar(leading_digit, frequency_values, color="crimson", width=0.75)
+plt.bar(leading_digit, frequency_values, color="#3185fc", edgecolor="black", linewidth=2)
 
 # setting the x-coordinates of the curve
 x = np.arange(1, 9.5, 0.1)
@@ -63,9 +64,6 @@ y = np.log10(1 + 1 / x) * n
 # note that the yellow X in Benford's curve corresponds to leading_digit values
 plt.plot(x, y, color="blue", linewidth=3, markevery=(leading_digit - 1) * 10, marker="X",
          markerfacecolor="yellow", markersize=10)
-
-# this statement is used to set the min and max values of the y-axis
-plt.ylim(0, 0.35 * n)
 
 # if you don't use this line of code, not all digits will be printed on the x-axis
 plt.xticks(leading_digit)
