@@ -8,8 +8,8 @@ relative_frequencies = [0.2957, 0.1788, 0.1276, 0.0963, 0.0794, 0.0715, 0.0571, 
 # this line of code is made just to make sure that we get the same samples
 np.random.seed(0)
 
-# we execute this for n = 3
-n = 3
+# we execute this for n = 2
+n = 2
 
 # here we'll be drawing 5000 samples, each sample of size n
 # and for each sample, we're calculating its mean
