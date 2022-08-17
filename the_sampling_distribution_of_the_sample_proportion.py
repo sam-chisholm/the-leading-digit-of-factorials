@@ -42,7 +42,7 @@ plt.box(False)
 # the sampling distribution of the sample proportion
 # note that density=True means that the sum of
 # area under histogram is integrated to 1
-plt.hist(sample_proportions, bins="auto", density=True, color="#0504aa", 
+plt.hist(sample_proportions, bins="auto", density=True, color="#0504aa",
          edgecolor="black", linewidth=2)
 
 # In the same time we draw the normal curve on top of the histogram
@@ -51,7 +51,7 @@ plt.plot(x, norm.pdf(x, sampling_distribution_mean,
          np.sqrt(sampling_distribution_variance)), color="red", linewidth=5)
 
 # setting the x and y label of the graph
-plt.xlabel("\ncomputed sample proportions")
+plt.xlabel("\nComputed sample proportions")
 plt.ylabel("Probability density\n")
 
 # setting the plot's title
@@ -72,4 +72,5 @@ text += "\n$\\frac{p \\times (1 - p)}{n}$ = " + str(0.1276 * 0.8724 / n)
 
 # then we display it on the graph
 plt.text(0.155, 15, text)
+
 plt.show()
