@@ -51,12 +51,12 @@ x = np.arange(np.amin(sample_variances) * (n - 1) / population_variance,
 plt.plot(x, chi2.pdf(x, df=n - 1), color="red", linewidth=5)
 
 # setting the x and label of the graph
-plt.xlabel("\ncomputed sample variances")
+plt.xlabel("\ncomputed scaled sample variances")
 plt.ylabel("Probability density\n")
 
 # setting the plot's title
 title = "A histogram showing the sampling distribution\n"
-title += "of the sample variance for samples of size = " + str(n) + "\n"
+title += "of the scaled sample variance for samples of size = " + str(n) + "\n"
 plt.title(title, color="blue")
 
 # first we fill text with the values of all observed parameters
