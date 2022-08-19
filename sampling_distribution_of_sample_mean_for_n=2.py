@@ -15,6 +15,7 @@ n = 2
 # and for each sample, we're calculating its mean
 # note that we're storing the sample means in this array
 sample_means = np.empty(5000)
+
 for i in range(5000):
     sample = np.random.choice(leading_digit, size=n, replace=True, p=relative_frequencies)
 
