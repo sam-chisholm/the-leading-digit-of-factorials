@@ -51,7 +51,7 @@ x = np.arange(np.amin(sample_variances) * (n - 1) / population_variance,
 plt.plot(x, chi2.pdf(x, df=n - 1), color="red", linewidth=5)
 
 # setting the x and label of the graph
-plt.xlabel("\nComputed scaled sample variances")
+plt.xlabel("\nScaled sample variances")
 plt.ylabel("Probability density\n")
 
 # setting the plot's title
