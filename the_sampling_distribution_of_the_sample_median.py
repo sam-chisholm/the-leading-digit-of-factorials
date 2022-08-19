@@ -37,7 +37,7 @@ plt.hist(sample_medians, bins="auto", density=True, color="#0504aa",
          edgecolor="black", linewidth=2)
 
 # setting the x and y label of the graph
-plt.xlabel("\ncomputed sample medians")
+plt.xlabel("\nComputed sample medians")
 plt.ylabel("Probability density\n")
 
 # setting the plot's title
