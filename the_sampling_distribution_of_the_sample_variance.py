@@ -16,7 +16,7 @@ np.random.seed(0)
 
 # we execute this for n = 5 and later on for n = 70
 
-n = 70
+n = 5
 
 # here we'll be drawing 5000 samples, each sample of size n
 # and for each sample, we're calculating its variance
@@ -51,7 +51,7 @@ x = np.arange(np.amin(sample_variances) * (n - 1) / population_variance,
 plt.plot(x, chi2.pdf(x, df=n - 1), color="red", linewidth=5)
 
 # setting the x and label of the graph
-plt.xlabel("\ncomputed scaled sample variances")
+plt.xlabel("\nComputed scaled sample variances")
 plt.ylabel("Probability density\n")
 
 # setting the plot's title
