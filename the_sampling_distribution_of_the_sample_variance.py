@@ -79,4 +79,5 @@ plt.text(8, 0.125, text)
 
 # USE THIS LINE OF CODE WHEN n = 70 INSTEAD of the previous one
 # plt.text(85, 0.025, text)
+
 plt.show()
