@@ -9,7 +9,7 @@ relative_frequencies = [.2957, .1788, .1276, .0963, .0794, .0715, .0571, .0510, 
 np.random.seed(0)
 
 # we execute this for n = 30 and n = 65
-n = 65
+n = 30
 
 # here we'll be drawing 5000 samples, each sample of size n
 # and for each sample, we're calculating its median
